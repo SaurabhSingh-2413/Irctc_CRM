@@ -1,0 +1,445 @@
+@charset "ISO-8859-1";
+* {
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+body {
+	overflow-x: hidden;
+}
+
+.container {
+	display: flex;
+}
+
+label {
+	display: table;
+	width: 200px;
+	overflow: hidden;
+}
+
+.nav-item {
+	position: sticky;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	width: 68px;
+	background: linear-gradient(#003180, #174590);
+	transition: 0.2s;
+}
+
+.nav-2 {
+	overflow: auto;
+	height: 86.2vh;
+	overflow-x: hidden;
+}
+
+.ubon-img {
+	height: 20px;
+	width: 20px;
+}
+
+.nav-item:hover {
+	width: 280px;
+	transition: 0.2s;
+}
+
+.side-nav {
+	height: 20px;
+	width: 20px;
+	position: absolute;
+}
+
+.main {
+	position: relative;
+	padding: 20px;
+	width: 100%;
+	overflow: auto;
+	overflow-x: hidden;
+	height: 100vh;
+}
+
+i {
+	font-size: 20px;
+	padding-left: 10px;
+	display: flex;
+	justify-content: flex-start;
+}
+
+label {
+	position: relative;
+	margin-left: 60px;
+	color: white;
+	display: flex;
+	justify-content: flex-start;
+	bottom: 20px;
+	cursor: pointer;
+}
+
+a {
+	position: relative;
+	width: 280px;
+	font-size: 14px;
+	color: white;
+	display: table;
+	padding: 10px;
+	top: 9px;
+}
+
+.ubon-img {
+	position: relative;
+	left: 20px;
+	mix-blend-mode: screen;
+	top: 10px;
+}
+
+.ubon-title {
+	position: relative;
+	left: 10px;
+	color: white;
+	bottom: 12px;
+}
+
+ul {
+	border-top: 1px solid white;
+	padding-top: 10px;
+}
+
+li:hover {
+	background-color: #3c629e;
+}
+
+li.active {
+	background-color: #194285;
+}
+
+.Log_container:hover {
+	background-color: #3c629e;
+}
+
+.log-img {
+	position: relative;
+	height: 50px;
+	width: 50px;
+	top: 15px;
+	left: 10px;
+}
+
+.id-label {
+	font-size: 13px;
+	position: relative;
+	left: 11px;
+}
+
+.Log_container i {
+	color: white;
+	font-size: 10px;
+	position: relative;
+	bottom: 38px;
+	left: 230px;
+}
+
+.logout-popup {
+
+	background-color: white;
+	height: 180px;
+	width: 270px;
+	border-radius: 3px;
+	border: none;
+	transform: translate(0%, -5%)scale(0);
+	position: absolute;
+	left: 100px;
+	bottom: 0px;
+	box-shadow: 0px 0px 17px 6px rgba(0, 0, 0, 0.2);
+}
+
+.log-img-2 {
+	position: relative;
+	top: 25px;
+	left: 15px;
+}
+
+/* This is used for logout when show popup*/
+.btn-out-2{
+    position: relative;
+    top: 70px;
+    height: 30px;
+    width: 250px;
+    left: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(35, 133, 238);
+    color: white;
+    cursor: pointer;
+}
+
+/*transform: translate(0%,-5%) scale(1);  (left) (down) */
+.logout-popup.active {
+	display: block;
+	transition: all 10ms ease-in-out;
+	transform: translate(0%, -5%) scale(1);
+}
+
+.logout-label {
+	position: relative;
+	bottom: 7px;
+	left: 10px;
+	font-size: 14px;
+	color: black;
+}
+
+#logout-icon {
+	padding: 2px;
+}
+
+/* ================================== After side bar ====================================================================== */
+
+.entryArea-1 {
+	display: flex;
+	margin-top: 20px;
+}
+
+.entryArea-1 input {
+
+	outline: none;
+	height: 40px;
+	width: 320px;
+	border-radius: 4px;
+	padding: 0 30px;
+	border: 2px solid gray;
+	background: transparent;
+	transition: 0.1s ease;
+	z-index: 1111;
+	font-size: 15px;
+
+}
+
+.entryArea-1 input::placeholder {
+	font-size: 13px;
+	opacity: 0;
+	transition: 0.1s;
+}
+
+.entryArea-1 input:focus::placeholder {
+	opacity: 1;
+}
+
+.entryArea-1 input:hover {
+	border: 2px solid black;
+}
+
+.labelLine-1 {
+	position: relative;
+	font-size: 1em;
+	background-color: white;
+	transition: 0.2s ease;
+	color: gray;
+	font-size: 15px;
+	right: 290px;
+	display: flex;
+	align-items: center;
+}
+
+.entryArea-1 input:focus {
+	color: rgb(86, 86, 86);
+	border: 2px solid rgb(35, 133, 238);
+}
+
+.entryArea-1 input:focus+.labelLine-1,
+.entryArea-1 input:valid+.labelLine-1 {
+	color: rgb(35, 133, 238);
+	height: 20px;
+	transform: translate(-25px, -10px) scale(0.88);
+	z-index: 1111;
+	position: relative;
+
+}
+
+
+
+.btn-1 {
+	background-color: rgb(35, 133, 238);
+	width: 70%;
+	height: 30px;
+	border-radius: 3px;
+	border: none;
+	color: white;
+	text-transform: uppercase;
+	bottom: 24px;
+	padding: 5px;
+	cursor: pointer;
+	margin-top: 50px;
+}
+
+.btn-1:hover{
+	background-color: rgb(58, 140, 228);
+}
+
+.btn-2 {
+	background-color: rgb(79, 79, 79);
+	width: 29%;
+	height: 30px;
+	border-radius: 3px;
+	border: none;
+	color: white;
+	text-transform: uppercase;
+	bottom: 24px;
+	padding: 5px;
+	cursor: pointer;
+	margin-top: 50px;
+}
+
+.btn-2:hover{
+	background-color: rgb(96, 96, 96);
+}
+
+#train-logo {
+	position: relative;
+	font-size: 15px;
+	color: gray;
+	margin-top: 32px;
+	left: 25px;
+	z-index: 1;
+}
+
+#ticket-logo{
+	position: relative;
+	font-size: 15px;
+	color: gray;
+	margin-top: 12px;
+	left: 25px;
+	z-index: 1;
+}
+
+
+.complaint-area{
+	display: flex;
+	justify-content: space-between;
+}
+
+.complaint-area a{
+	font-size: 15px;
+	text-transform: uppercase;
+	padding: 15px;
+	padding-left: 50px;
+	width: 259px;
+}
+
+.currentPage{
+	color: rgb(35, 133, 238);
+	border-bottom: 2px solid rgb(35, 133, 238);
+	width: 100%;
+}
+
+.nonCurrentPage{
+	color: gray;
+}
+
+#complaint-status{
+	width: 100%;
+}
+
+#complaint-train{
+	width: 100%;
+}
+
+#complaint-station{
+	width: 100%;
+}
+
+.trainComplaintTag{
+	padding-top: 20px;
+}
+
+#status-1 {
+	margin-top: 30px;
+	border-radius: 5px;
+	border-top: 1px solid rgb(248, 245, 245);
+	border-left: 2px solid rgb(230, 228, 228);
+	border-right: 2px solid rgb(230, 228, 228);
+	border-bottom: 2.3px solid rgb(172, 171, 171);
+	padding: 10px;
+}
+
+#status-2 {
+	margin-top: 30px;
+	border-radius: 5px;
+	border-top: 1px solid rgb(248, 245, 245);
+	border-left: 5px solid rgb(171, 42, 42);
+	border-right: 2px solid rgb(230, 228, 228);
+	border-bottom: 2.3px solid rgb(172, 171, 171);
+	padding: 10px;
+}
+
+#btn-3{
+	background-color: rgb(35, 133, 238);
+	width: 300px;
+	height: 30px;
+	border-radius: 3px;
+	border: none;
+	color: white;
+	text-transform: uppercase;
+	bottom: 24px;
+	padding: 5px;
+	cursor: pointer;
+	margin-top: 50px;
+}
+
+.referenceNumber{
+	display: none;
+}
+
+#Complainttags:hover {
+	background-color: #e0e0e0;
+	cursor: pointer;
+}
+
+
+#CompalintType{
+	border: 2px solid black;
+	height: 40px;
+	width: 50%;
+	border-radius: 4px;
+	padding-left: 25px;
+	margin-top: 20px;
+}
+
+
+#selectFields{
+	display: flex;
+}
+
+#travelType{
+	display: flex;
+	padding-top: 20px;
+}
+
+#ContactIncidentdate{
+	display: flex;
+	padding-top: 20px;
+}
+
+#TextAreaForComplaint{
+	border: 2px solid gray;
+	height: 100px;
+	width: 100%;
+	margin-top: 30px;
+}
+
+textarea{
+	border-radius: 3px;
+	resize: none;
+	padding-left: 20px;
+	padding-top: 20px;
+	font-size: 15px;
+	color: gray;
+}
+
+textarea::placeholder{
+	font-size: 18px;
+}
